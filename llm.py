@@ -5,13 +5,11 @@ GEMINI_API_KEY = config.get("GEMINI_API_KEY")
 OPENAI_API_KEY = config.get("OPENAI_API_KEY")
 OPENAI_MODEL = config.get("OPENAI_MODEL", "gpt-3.5-turbo")
 
+# Prefer Google's GenAI client if available, otherwise fall back to OpenAI if configured.
 USE_BACKEND = None
-client = None
-MODEL_NAME = None
 
-# Try Google GenAI (Gemini) first, but import in a try/except to avoid ImportError
 try:
-    # import the namespace package directly (this will fail if the installed 'google' package is not the google.* namespace expected)
+    # Try to import the official Google GenAI SDK
     import google.genai as genai
     from google.genai import types
 
@@ -36,11 +34,18 @@ except Exception as _e:
         USE_BACKEND = "openai"
         print("Falling back to OpenAI client")
     else:
+        # Neither backend is usable; make imports succeed but raise at runtime
         USE_BACKEND = None
         print("No usable LLM backend configured (google.genai not installed or GEMINI_API_KEY missing; OpenAI not configured).")
 
+
 def ask_gemini(prompt: str) -> str:
-    """Generate text for the given prompt using the available backend."""
+    """Generate text for the given prompt using the available backend.
+
+    Returns a string with the model response. Raises RuntimeError if no backend is
+    configured.
+    """
+
     if USE_BACKEND == "genai":
         try:
             print(f"\n🧠 Using Model (Gemini): {MODEL_NAME}")
@@ -53,6 +58,7 @@ def ask_gemini(prompt: str) -> str:
                     response_mime_type="application/json"
                 )
             )
+            # response.text may exist; otherwise fall back to str(response)
             return getattr(response, "text", str(response))
         except Exception as e:
             print("\n========== GEMINI ERROR ==========")
@@ -62,6 +68,7 @@ def ask_gemini(prompt: str) -> str:
     elif USE_BACKEND == "openai":
         try:
             print(f"\n🧠 Using Model (OpenAI): {MODEL_NAME}")
+            # Use Chat Completions for modern OpenAI models
             resp = openai.ChatCompletion.create(
                 model=MODEL_NAME,
                 messages=[{"role": "user", "content": prompt}],
@@ -69,6 +76,7 @@ def ask_gemini(prompt: str) -> str:
                 top_p=0.8,
                 n=1,
             )
+            # Extract the assistant reply
             return resp["choices"][0]["message"]["content"]
         except Exception as e:
             print("\n========== OPENAI ERROR ==========")
@@ -76,6 +84,4 @@ def ask_gemini(prompt: str) -> str:
             raise
 
     else:
-        raise RuntimeError(
-            "No LLM backend configured. Set GEMINI_API_KEY for Google GenAI or OPENAI_API_KEY for OpenAI in .env and install the corresponding client library."
-        )
+        raise RuntimeError("No LLM backend configured. Set GEMINI_API_KEY for Google GenAI or OPENAI_API_KEY for OpenAI in .env and install the corresponding client library.")

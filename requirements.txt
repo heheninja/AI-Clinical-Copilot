@@ -3,3 +3,4 @@ pillow
 pytesseract
 openai
 python-dotenv
+requests
