@@ -1,0 +1,149 @@
+{
+    "patient": {
+        "chief_complaint": "Sore throat for 3 days",
+        "history_of_present_illness": "The patient, Abhishek, presents with a 3-day history of sore throat and pain upon swallowing. He reports a mild fever (around 100\u00b0F yesterday) and a mild cough. Denies difficulty breathing.",
+        "symptoms": [
+            "Sore throat",
+            "Pain on swallowing",
+            "Mild fever",
+            "Mild cough"
+        ],
+        "duration": "3 days",
+        "severity": "Mild to moderate",
+        "allergies": [],
+        "current_medications": [
+            "Paracetamol"
+        ],
+        "past_medical_history": [],
+        "family_history": [],
+        "social_history": [],
+        "vitals": {
+            "temperature": "100\u00b0F (reported yesterday)",
+            "blood_pressure": "",
+            "heart_rate": "",
+            "respiratory_rate": "",
+            "oxygen_saturation": ""
+        },
+        "department": "General Medicine"
+    },
+    "clinical_summary": "Abhishek, a male patient, presents with a 3-day history of sore throat, odynophagia, mild cough, and a reported mild fever of 100\u00b0F. He has been taking paracetamol. On physical examination, the pharynx is red and inflamed. Lungs sound clear and vital signs are reported stable. There is no respiratory distress or reported drug allergies.",
+    "clinical_impression": [
+        "Acute Pharyngitis",
+        "Acute Tonsillitis",
+        "Upper Respiratory Tract Infection"
+    ],
+    "triage": {
+        "urgency": "Routine",
+        "reason": "Stable condition with localized upper respiratory symptoms and mild fever, without respiratory distress or emergency signs.",
+        "department": "General Medicine",
+        "estimated_wait_time": "2\u20134 hours"
+    },
+    "risk_assessment": {
+        "risk_level": "Low",
+        "score": 20,
+        "reason": "Stable vitals, absence of red flag symptoms like dyspnea or severe systemic toxicity."
+    },
+    "clinical_decision_support": {
+        "recommended_specialist": "General Practitioner",
+        "recommended_action": "Advise supportive care, hydration, salt-water gargles, and monitoring of symptoms.",
+        "monitoring_required": "Monitor temperature and throat pain severity.",
+        "follow_up": "Return for review if fever or throat pain worsens or fails to improve within 3 days.",
+        "priority_reason": "Low-risk localized respiratory illness manageable in primary care."
+    },
+    "care_pathway": {
+        "consultation_type": "Primary Care Consultation",
+        "recommended_next_step": "Outpatient Medical Follow-up",
+        "estimated_priority": "Routine"
+    },
+    "clinical_flags": {
+        "emergency_case": false,
+        "requires_specialist": false,
+        "high_risk_patient": false
+    },
+    "recommended_tests": [
+        "Rapid Streptococcal Antigen Test",
+        "Throat Swab Culture"
+    ],
+    "red_flags": {
+        "present": false,
+        "items": []
+    },
+    "follow_up_questions": [
+        "Do you have any underlying medical conditions?",
+        "Are you experiencing any swollen glands or neck tenderness?",
+        "Do you have any difficulty fully opening your mouth?"
+    ],
+    "missing_information": [
+        "Past medical history",
+        "Family history",
+        "Social history",
+        "Objective vital signs measurements (BP, HR, RR, SpO2)"
+    ],
+    "doctor_handoff": "Patient Abhishek presents with 3 days of sore throat, pain on swallowing, mild cough, and fever (100\u00b0F). Throat exam revealed inflammation; chest clear. Stable presentation without dyspnea. No known drug allergies.",
+    "patient_summary": {
+        "condition_overview": "You presented with a sore throat, painful swallowing, mild cough, and mild fever lasting for three days. Your throat examination showed redness and inflammation.",
+        "next_steps": [
+            "Follow doctor's instructions for home care and gargling.",
+            "Rest adequately and stay hydrated.",
+            "Return for a check-up if your symptoms worsen."
+        ],
+        "warning_signs": [
+            "Difficulty breathing or noisy breathing",
+            "Inability to swallow liquids or manage saliva",
+            "High persistent fever",
+            "Difficulty opening your mouth"
+        ]
+    },
+    "patient_advice": [
+        "Drink plenty of water and warm fluids.",
+        "Perform warm salt-water gargles regularly to ease throat irritation.",
+        "Get sufficient rest to help your body recover.",
+        "Seek immediate medical attention if you develop trouble breathing or severe swallowing difficulty."
+    ],
+    "consultation_metrics": {
+        "information_completeness": 70,
+        "missing_information_count": 4,
+        "consultation_quality": "Good"
+    },
+    "metadata": {
+        "ai_generated": true,
+        "model_confidence": 0.82,
+        "generated_at": "2025-02-15T00:00:00Z",
+        "disclaimer": "This output is AI-generated and is intended only to assist healthcare professionals. It is not a medical diagnosis."
+    },
+    "prescription_ocr": {
+        "diagnosis": null,
+        "doctor_notes": null,
+        "medicines": [
+            {
+                "name": "Tab Cefimo / Glencef",
+                "strength": "200",
+                "dose": "1 tablet",
+                "frequency": "1-0-1",
+                "duration": "3 days",
+                "instructions": "Total 6 tablets"
+            }
+        ],
+        "tests": [],
+        "follow_up": null,
+        "other_notes": "Patient Name: Abhishek, Date: 28-03-26"
+    },
+    "medicine_guide": [
+        {
+            "medicine": "Tab Cefimo / Glencef (200 mg)",
+            "purpose": "An antibiotic used to treat and cure bacterial infections in the body.",
+            "when_to_take": "Take 1 tablet in the morning and 1 tablet at night for 3 days.",
+            "side_effects": "Mild stomach upset, nausea, loose stools (diarrhea), or gas.",
+            "food_instruction": "Best taken after meals with a glass of water to prevent an upset stomach.",
+            "simple_explanation": "This is an antibiotic medicine that kills harmful bacteria. You should take one tablet twice a day (morning and night) for 3 days until all 6 tablets are finished, even if you start feeling better earlier."
+        }
+    ],
+    "doctor_review": {
+        "reviewed": true,
+        "approved": true,
+        "diagnosis": "Acute Pharyngitis",
+        "treatment_changes": [],
+        "notes": "",
+        "edited_fields": []
+    }
+}

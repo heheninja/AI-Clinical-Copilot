@@ -1,0 +1,36 @@
+[
+    {
+        "aadhaar": "123456789012",
+        "name": "Rahul Sharma",
+        "age": 45,
+        "gender": "Male",
+        "blood_group": "O+",
+        "allergies": [
+            "Penicillin"
+        ],
+        "medical_history": [
+            "Diabetes",
+            "Hypertension"
+        ],
+        "current_medications": [
+            "Metformin 500mg",
+            "Amlodipine 5mg"
+        ]
+    },
+    {
+        "aadhaar": "987654321098",
+        "name": "Priya Singh",
+        "age": 32,
+        "gender": "Female",
+        "blood_group": "B+",
+        "allergies": [
+            "None"
+        ],
+        "medical_history": [
+            "Asthma"
+        ],
+        "current_medications": [
+            "Salbutamol Inhaler"
+        ]
+    }
+]

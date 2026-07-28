@@ -1,0 +1,119 @@
+{
+    "patient": {
+        "chief_complaint": "Fever and sore throat",
+        "history_of_present_illness": "The patient reports experiencing a fever for two days accompanied by a sore throat and a mild cough. Denies any drug or environmental allergies.",
+        "symptoms": [
+            "Fever",
+            "Sore throat",
+            "Mild cough"
+        ],
+        "duration": "2 days",
+        "severity": "",
+        "allergies": [],
+        "current_medications": [],
+        "past_medical_history": [],
+        "family_history": [],
+        "social_history": [],
+        "vitals": {
+            "temperature": "",
+            "blood_pressure": "",
+            "heart_rate": "",
+            "respiratory_rate": "",
+            "oxygen_saturation": ""
+        },
+        "department": "General Medicine"
+    },
+    "clinical_summary": "A patient presents with a 2-day history of fever, sore throat, and a mild cough. The patient reports no known allergies. Vital signs, past medical history, and current medications were not obtained during the initial consultation.",
+    "clinical_impression": [
+        "Viral upper respiratory tract infection",
+        "Acute pharyngitis",
+        "Acute tonsillitis"
+    ],
+    "triage": {
+        "urgency": "Routine",
+        "reason": "Mild acute symptoms of 2 days duration without respiratory distress or reported emergency red flags.",
+        "department": "General Medicine",
+        "estimated_wait_time": "2\u20134 hours"
+    },
+    "risk_assessment": {
+        "risk_level": "Low",
+        "score": 20,
+        "reason": "Short duration of mild respiratory and systemic symptoms with no red flag symptoms reported."
+    },
+    "clinical_decision_support": {
+        "recommended_specialist": "General Practitioner",
+        "recommended_action": "Perform physical examination of the pharynx and lung fields, record vital signs, and evaluate for infectious etiology.",
+        "monitoring_required": "Monitor body temperature, hydration level, and respiratory effort.",
+        "follow_up": "Follow up in 3 to 5 days if symptoms persist or deteriorate.",
+        "priority_reason": "Stable clinical presentation suitable for primary care evaluation."
+    },
+    "care_pathway": {
+        "consultation_type": "Primary Care Consultation",
+        "recommended_next_step": "Outpatient primary care consultation for physical exam",
+        "estimated_priority": "Routine"
+    },
+    "clinical_flags": {
+        "emergency_case": false,
+        "requires_specialist": false,
+        "high_risk_patient": false
+    },
+    "recommended_tests": [
+        "Rapid streptococcal antigen test",
+        "Throat swab culture"
+    ],
+    "red_flags": {
+        "present": false,
+        "items": []
+    },
+    "follow_up_questions": [
+        "Have you measured your body temperature with a thermometer?",
+        "Are you having any difficulty breathing or swallowing?",
+        "Are you currently taking any medications?",
+        "Do you have any existing medical conditions?"
+    ],
+    "missing_information": [
+        "Specific temperature reading",
+        "Current medications",
+        "Past medical history",
+        "Vital signs",
+        "Symptom severity details"
+    ],
+    "doctor_handoff": "Patient is a individual presenting with 2 days of fever, sore throat, and mild cough. Denies allergies. Vitals, past medical history, and current medications are unrecorded. Risk is currently assessed as low.",
+    "patient_summary": {
+        "condition_overview": "You reported having a fever, sore throat, and a mild cough for the past two days. Based on your conversation, these symptoms reflect a mild upper respiratory complaint.",
+        "next_steps": [
+            "Schedule a routine evaluation with a primary care doctor.",
+            "Get adequate rest and maintain hydration."
+        ],
+        "warning_signs": [
+            "Difficulty breathing or shortness of breath",
+            "Inability to swallow liquids or severe pain",
+            "Persistent high fever not controlled by supportive measures"
+        ]
+    },
+    "patient_advice": [
+        "Ensure adequate hydration by drinking plenty of fluids.",
+        "Get sufficient rest to help your body recover.",
+        "Monitor your temperature and symptoms closely.",
+        "Seek immediate medical care if you develop severe difficulty swallowing or breathing."
+    ],
+    "consultation_metrics": {
+        "information_completeness": 45,
+        "missing_information_count": 5,
+        "consultation_quality": "Fair"
+    },
+    "metadata": {
+        "ai_generated": true,
+        "model_confidence": 0.65,
+        "generated_at": "2023-10-27T00:00:00Z",
+        "disclaimer": "This output is AI-generated and is intended only to assist healthcare professionals. It is not a medical diagnosis."
+    },
+    "doctor_review": {
+        "reviewed": true,
+        "approved": true,
+        "diagnosis": "Viral upper respiratory tract infection",
+        "treatment_changes": [],
+        "notes": "",
+        "edited_fields": []
+    }
+}
